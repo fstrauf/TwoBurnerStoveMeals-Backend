@@ -1,0 +1,14 @@
+type User {
+  id: ID! @id
+  name: String!
+}
+
+type Recipe {
+  id: ID! @id
+  createdAt: DateTime! @createdAt
+  updatedAt: DateTime! @updatedAt
+  title: String! @unique
+  ingredients: String!
+  directions: String!  
+  isPublished: Boolean! @default(value: false)
+}
